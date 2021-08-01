@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caisa | IBM</title>
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <script type="text/javascript">
+        /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+            if (!pageYOffset) window.scrollTo(0, 1);
+        }, 1000);
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/amazium.css">
+    <link rel="stylesheet" href="CSS/amazium-percent.css">
+    <link rel="stylesheet" href="CSS/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/2a1eb696f2.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="indexi.js"></script>
+    <script src="botones.js"></script>
+
+</head>
+
+<body>
+    <div class="row-max">
+        <div id="">
+            <div class="">
+                <div id="header">
+                    <div class="row-max">
+                        <div class="grid_2 px-5 text-center"><a href="index.html"><img src="img/logo.png" alt="Caisa"
+                                    class="logo"></a></div>
+                        <div class="grid" style="padding-top: 25px;">
+                            <div class="txt-center px-5">
+                                <ul id="menutop">
+                                    <li><a href="index.html" class="lactive">Inicio</a></li>
+                                    <li><a href="quienessomos.html" class="lactive">Quienes Somos</a></li>
+                                    <li><a href="servicios.html" id="serv" class="lactive">Servicios</a></li>
+                                    <li><a href="productos.html" id="prods" class="lactive">Productos</a></li>
+                                    <li><a href="alianzas.html" id="alian" class="lactive">Alianzas</a></li>
+                                    <li><a href="contacto.html" class="lactive">Contacto</a></li>
+                                    <!-- <input type="text" value="Buscar" id="BS" name="qry"
+										class="placeholder rounded-pill">
+									<input type="image" src="img/sh.png" id="s" title="Buscar"> -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultados"></div>
+    <script>
+        $('#BS').click(function () {
+            $('#BS').removeClass('placeholder'),
+                $('#BS').val('')
+        })
+        $('#s').click(function () {
+            var datos = $('#BS').val();
+            if (datos != "Buscar") {
+                $('#resultados').load('/search.php?qry=' + datos, function () {
+                    $('#resultados').slideDown();
+                });
+            }
+        })
+        $('#BS').keypress(function (e) {
+            var datos = $('#BS').val();
+            if (e.which == 13) {
+                if (datos != "") {
+                    $('#resultados').load('/search.php?qry=' + datos, function () {
+                        $('#resultados').slideDown();
+                    });
+                }
+            }
+        });
+    </script>
+
+    <div class="">
+        <div class="col-12">
+            <div class="row-max">
+                <div class="grid_12">
+                    <div class="contqs btsrv">
+
+                        <img src="img/ibm2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gr" style="padding:3em;">
+        <div class="">
+            <div class="row-max">
+                <div class="grid_9 mt-4">
+                    <div class="servs">
+                        <p>IBM es una empresa Global de tecnolog&iacute;a y consultor&iacute;a con mas de 100
+                            a&ntilde;os de existencia y desde 1927 con presencia en M&eacute;xico. IBM fabrica y
+                            comercializa hardware y software para computadoras, y ofrece servicios de infraestructura,
+                            alojamiento de Internet, y consultor&iacute;a en una amplia gama de &aacute;reas
+                            relacionadas con la inform&aacute;tica, desde computadoras centrales hasta
+                            nanotecnolog&iacute;a.</p>
+
+                        <p>En CAISA ofrecemos las soluciones de Softlayer de servicios en la Nube, los cuales
+                            describimos a continuaci&oacute;n:</p>
+
+                        <p>SoftLayer aporta la infraestructura de nube de mayor rendimiento disponible. Una plataforma
+                            que abarca centros de datos por todo el mundo, formados por la m&aacute;s amplia gama de
+                            opciones de inform&aacute;tica en la nube, y que lo integra y automatiza todo.</p>
+
+                        <p><strong>Servidores virtuales</strong></p>
+
+                        <p>Motores de rendimiento real</p>
+
+                        <p>La nube no es una mercanc&iacute;a, y los servidores virtuales no son iguales en todas
+                            partes. De cualquier servidor de nube virtual esperar&iacute;amos que tuviera velocidad de
+                            despliegue, escalabilidad flexible y facturaci&oacute;n de adaptaci&oacute;n progresiva.</p>
+
+                        <p>Los servidores virtuales SoftLayer superan estas expectativas. Nuestros servidores virtuales
+                            ofrecen un mayor grado de personalizaci&oacute;n, transparencia, previsibilidad y
+                            automatizaci&oacute;n, y se integran perfectamente con los servidores dedicados de
+                            SoftLayer.</p>
+
+                        <p>Cree el servidor virtual que necesita. Utilice los controladores deslizantes para empezar a
+                            crear un servidor virtual que se adapte a sus necesidades. Elija entre factura por horas o
+                            por meses. A continuaci&oacute;n, configure los detalles seg&uacute;n lo que necesite.
+                            A&ntilde;ada almacenamiento adicional, elija un sistema operativo, a&ntilde;ada paneles de
+                            control, cortafuegos, supervisi&oacute;n, etc.<br />
+                            <br />
+                            <!-- <img alt="" src="/Publicfiles/1.png" style="height:395px; width:730px" /> -->
+                        </p>
+                        <!-- este yo lo agregue ERCA -->
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong>Servidores dedicados</strong></p>
+
+                        <p>Rendimiento neto al alcance de su mano</p>
+
+                        <p>Los servidores dedicados de SoftLayer proporcionan la potencia neta que usted exige para sus
+                            cargas de trabajo de uso intensivo de E/S de disco y de procesador. Estos servidores vienen
+                            con el paquete m&aacute;s completo de caracter&iacute;sticas y servicios.</p>
+
+                        <p>Configure el servidor seg&uacute;n sus especificaciones exactas a trav&eacute;s de nuestro
+                            portal o API y despli&eacute;guelo en tiempo real a cualquier centro de datos de SoftLayer;
+                            otros servidores en la nube so&ntilde;ar&iacute;an con tener este espectro de velocidad,
+                            potencia y flexibilidad.<br />
+                            <br />
+                            <!-- <img alt="" src="/Publicfiles/3.png" style="height:205px; width:732px" /> -->
+                        </p>
+
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+
+                        <p><strong>Software</strong></p>
+
+                        <p>Simplifique la administraci&oacute;n con el software de servidor</p>
+
+                        <p>No importa si tiene la configuraci&oacute;n de servidor ideal para las cargas de trabajo, si
+                            ello no va acompa&ntilde;ando de los sistemas operativos, los paneles de control, las
+                            aplicaciones de bases de datos y el software de utilidades que necesita.</p>
+
+                        <p>SoftLayer ofrece una gama completa de opciones de software de los l&iacute;deres del sector
+                            que se han instalado utilizando las pr&aacute;cticas recomendadas de cada proveedor, tienen
+                            licencia y se facturan mes a mes con el resto de la soluci&oacute;n.<br />
+                            <br />
+                            <!-- <img alt="" src="/Publicfiles/5.png" style="height:432px; width:725px" /> -->
+                        </p>
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/5.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong>Sistema Operativo</strong></p>
+
+                        <p>Se pueden instalar sistemas operativos de 32 y 64 bits* (muchos de ellos sin coste mensual
+                            adicional) durante el despliegue del servidor, on demand a trav&eacute;s del portal de
+                            clientes, y mantenerlos actualizados a trav&eacute;s de los servidores de
+                            actualizaci&oacute;n privados proporcionados por los proveedores, situados en el interior de
+                            nuestra red privada.</p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>CentOS</li>
+                                            <li>CoreOS</li>
+                                            <li>CloudLinux</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Debian</li>
+                                            <li>FreeBSD</li>
+                                            <li>Microsoft</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Red Hat</li>
+                                            <li>Ubuntu</li>
+                                            <li>Vyatta Network</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>1Los servidores dedicados tambi&eacute;n est&aacute;n disponibles sin un sistema
+                            operativo<br />
+                            <br />
+                            &nbsp;
+                        </p>
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/sep.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <p><br />
+                            <img alt="" src="img/sep.png" style="height:39px; width:749px" />
+                        </p> -->
+
+                        <p><strong><img alt="" src="img/vv.png" style="height:150px; width:146px" /><br />
+                                Virtualizacion</strong></p>
+
+                        <p>A&ntilde;ada una capa de virtualizaci&oacute;n a su servidor con software de las empresas</p>
+
+                        <p>l&iacute;deres en tecnolog&iacute;a.<br />
+                            &nbsp;</p>
+
+                        <table border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Citrix Xenserver</li>
+                                            <li>Parallels Cloud Server</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Microsoft Hyper-V</li>
+                                            <li>VMware ESX y ESXi</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>VMware vSphere</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/sep.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <!-- <img alt="" src="/Publicfiles/image/caisa/sep.png" style="height:39px; width:749px" /> -->
+
+                            <img alt="" src="img/ca.png" style="height:137px; width:105px" />
+                        </p>
+
+                        <p><br />
+                            <strong>Seguridad</strong>
+                        </p>
+
+                        <p>A&ntilde;ada servicios de seguridad a su servidor, de las marcas m&aacute;s</p>
+
+                        <p>reconocidas a nivel tecnolog&iacute;a.</p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>McAfee Anti-Virus</li>
+                                            <li>McAfee Host Intrusion</li>
+                                            <li>Protection</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nimsoft Monitoring</li>
+                                            <li>Microsoft Windows</li>
+                                            <li>Firewall</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>APF Software Firewall</li>
+                                            <li>McAfee Total Protection</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/sep.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <!-- <img alt="" src="/Publicfiles/image/caisa/sep.png" style="height:39px; width:749px" /> -->
+
+                            <img alt="" src="img/bas.png" style="height:110px; width:105px" />
+                        </p>
+
+                        <p><br />
+                            <strong>Bases de datos</strong>
+                        </p>
+
+                        <p>Puede instalar software de bases de datos SQL o no SQL durante el despliegue del servidor o
+                            en cualquier momento durante la vida de su servidor, listo para su configuraci&oacute;n.
+                            Obtenga m&aacute;s informaci&oacute;n sobre el despliegue de Big Data en SoftLayer.</p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>MySQL</li>
+                                            <li>Microsoft SQL Server<br />
+                                                (2005, 2008, 2012, 2014)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>IBM Cloud Analytics</li>
+                                            <li>Cloudera Hadoop</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>MongoDB</li>
+                                            <li>Basho Riak</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="col-12">
+                            <div class="row-max">
+                                <div class="grid_12">
+                                    <div class="contqs btsrv">
+
+                                        <img src="img/sep.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <!-- <img alt="" src="/Publicfiles/image/caisa/sep.png" style="height:39px; width:749px" /> -->
+
+                            <img alt="" src="img/pan.png" style="height:107px; width:105px" />
+                        </p>
+
+                        <p><strong>Panel de control</strong></p>
+
+                        <p>Instale un panel de control que proporcione una interfaz GUI para agilizar la
+                            administraci&oacute;n<br />
+                            del servidor.</p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="2" cellspacing="2">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>cPanel/WHM con Fantastico, RVSkin y Softaculous</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Parallels Plesk Panel</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p><br />
+                            &nbsp;</p>
+
+                        <p><strong>CENTROS DE DATOS</strong></p>
+
+                        <p>La nube es un lugar en la tierra.</p>
+
+                        <p>Crear y operar un centro de datos implica m&aacute;s que llenar una sala con servidores. Cada
+                            aspecto de un centro de datos de SoftLayer (desde ubicaci&oacute;n y accesibilidad hasta
+                            densidad energ&eacute;tica y refrigeraci&oacute;n) est&aacute; dise&ntilde;ado para
+                            garantizar su seguridad, flexibilidad y eficacia.</p>
+
+                        <p>Construimos los centro con las mismas especificaciones y los equipamos para ofrecer el
+                            cat&aacute;logo completo de servicios de SoftLayer. Y todos ellos cuentan
+                            ininterrumpidamente con personal experto para solucionar problemas y hacer frente a las
+                            cuestiones poco frecuentes que no se puedan resolver</p>
+
+                        <p>directamente a trav&eacute;s de nuestro sistema de gesti&oacute;n automatizado.</p>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong>RED</strong></p>
+
+                        <p>Piense que su centro de datos es el mundo entero.</p>
+
+                        <p>Creamos un tipo distinto de red, una red de redes. Por eso, SoftLayer ofrece una
+                            escalabilidad y un control sin precedentes. El tr&aacute;fico de gesti&oacute;n,
+                            p&uacute;blico y privado, viaja por interfaces de red separadas, lo que permite segregar y
+                            proteger el tr&aacute;fico mientras se agiliza la gesti&oacute;n.</p>
+
+                        <p>Nuestra red global cuenta con m&aacute;s de 2.000 Gbps de conectividad entre centros de datos
+                            y puntos de presencia de red (PoP). Estas ubicaciones tienen cada una diversas conexiones de
+                            tr&aacute;nsito de 10 Gbps, as&iacute; como enlaces de interconexi&oacute;n redes de acceso
+                            y proveedores de servicio adicionales.</p>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong>AUTOMATIZACI&Oacute;N</strong></p>
+
+                        <p>Despliegue, control y gesti&oacute;n por nuestros propios medios. O mediante la API.</p>
+
+                        <p>Todo lo que podemos automatizar, no lo ofrecemos. Todas las ofertas de nuestra plataforma
+                            (desde servidores y almacenamiento a cortafuegos, equilibradores de carga e incluso nuestro
+                            sistema de gesti&oacute;n de cuentas) se controlan con un &uacute;nico sistema de
+                            gesti&oacute;n con su propia API.</p>
+
+                        <p>Hemos automatizado el despligue y la gesti&oacute;n de todo. Y hemos ampliado el control y
+                            acceso total a clientes a trav&eacute;s de la misma API, as&iacute; como mediante
+                            aplicaciones m&oacute;viles y un portalweb f&aacute;cil de utilizar.</p>
+                        <div class="float-clear"></div>
+                    </div>
+                </div>
+                <div class="grid_3 mt-4">
+                    <div class="menuside">
+                        <img src="img/tproductos.png" alt="Productos" class="tim" id="btProds">
+                        <ul id="mProds" style="display:block;">
+                            <li><span class="tside">Nuestros productos</span></li>
+                            <li><a href="expediente.html" style="color:#006699;" class=" lsubs">Expediente
+                                    Clí­nico Electrónico</a></li>
+                            <li><a href="control.html" style="color:#006699;" class=" lsubs">Control de
+                                    Precios Unitarios</a></li>
+                            <li><a href="sistemaint.html" style="color:#006699;" class=" lsubs">Sistema Integral
+                                    Jurídico</a></li>
+                            <li><a href="sap.html" style="color:#006699;" class="">SAP</a></li>
+                            <li><a href="microsoft.html" style="color:#006699;" class="">Microsoft</a></li>
+                            <li><a href="fortinet.html" style="color:#006699;" class="">Fortinet</a></li>
+                            <li><a href="cisco.html" style="color:#006699;" class="">CISCO</a></li>
+                            <li><a href="huawei.html" style="color:#006699;" class="">Huawei</a></li>
+                            <li><a href="ibm.html" style="color:#006699;" class="infsel">IBM</a></li>
+                            <li style="border:none;"><a href="citrix.html" style="color:#006699;" class="">CITRIX</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menuside">
+                        <img src="img/tservicios.png" alt="Servicios" class="tim" id="btServs">
+                        <ul id="mServs">
+                            <li style="border-bottom: solid 1px #009999;"><a href="ciberseguridad.html"
+                                    style="color:#009999;">Ciberseguridad</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="Bianalitics.html"
+                                    style="color:#009999;">BI y Analytics</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="virtualizacion.html"
+                                    style="color:#009999;">Virtualización</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="SAM.html"
+                                    style="color:#009999;">SAM</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="redes.html"
+                                    style="color:#009999;">Redes</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="serviciosadministrados.html"
+                                    style="color:#009999;">Servicios Administrados</a></li>
+                            <li style="border:none;"><a href="basesdedatos.html" style="color:#009999;">Bases de
+                                    Datos</a></li>
+                        </ul>
+                    </div>
+                    <div class="menuside">
+                        <a href="alianzas.html"><img src="img/talianzas.png" alt="Alianzas" class="tim"></a>
+                    </div>
+                    <script>
+                        $('#btProds').click(function () {
+                            $('#mProds').slideDown("fast"),
+                                $('#mServs').slideUp("fast");
+                        });
+                        $('#btServs').click(function () {
+                            $('#mServs').slideDown("fast"),
+                                $('#mProds').slideUp("fast");
+                        })
+                    </script>
+                </div>
+                <div class="float-clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row-max">
+            <div class="btsrv">
+                <div class="grid_4"><a href="servicios.html"><img src="img/servicios.png" alt="Servicios"></a></div>
+                <div class="grid_4"><a href="productos.html"><img src="img/productos.png" alt="Productos"></a></div>
+                <div class="grid_4"><a href="alianzas.html"><img src="img/alianzas.png" alt="Anlianzas"></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- empieza el footer -->
+    <div class="bg_foot">
+        <div class="">
+            <div id="foot1">
+                <div class="row-max">
+
+                    <div class="grid_12 justify-content-center">
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos"><a href="quienessomos.html">Quienes somos</a></span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="quienessomos.html">Historia</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="quienessomos.html">Misión</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="quienessomos.html">Visión</a></li>
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Servicios</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="Bianalitics.html">BI y Analytics</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="virtualizacion.html">Virtualización</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="SAM.html">SAM</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="redes.html">Redes</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="serviciosadministrados.html">Servicios Administrados</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="basesdedatos.html">Bases de Datos</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Productos</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="expediente.html">Expediente Clí­nico Electrónico</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="control.html">Control de Precios Unitarios</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="sistemaint.html">Sistema Integral Jurídico</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="sap.html">SAP</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="microsoft.html">Microsoft</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="fortinet.html">Fortinet</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="cisco.html">CISCO</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="huawei.html">Huawei</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="ibm.html">IBM</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="citrix.html">CITRIX</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Alianzas</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="//www.microsoft.com/es-mx/" target="_blank">Microsoft</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//www.fortinet.com/" target="_blank">Fortinet</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="https://www.oracle.com/index.html" target="_blank">Oracle</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//consumer.huawei.com/mx/" target="_blank">Huawei</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//lac.citrix.com/" target="_blank">Citrix</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                <li><a href="avisodeprivacidad.html"><b>AVISO DE PRIVACIDAD</b></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- empieza el segundo footer -->
+    <div id="bg_foot1">
+        <div class="">
+            <div class="row-max">
+                <div class="grid_8">
+                    <ul id="footmenu">
+                        <li><a href="/">Inicio</a></li>
+                        <li>|</li>
+                        <li><a href="quienessomos.html">Quienes Somos</a></li>
+                        <li>|</li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li>|</li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li>|</li>
+                        <li><a href="alianzas.html">Alianzas</a></li>
+                        <li>|</li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li>|</li>
+                    </ul>
+                </div>
+                <div class="grid_4 text-center" style="color: #005468;">
+                    <div class="slog"><b>CAISA</b> La
+                        solución integral a sus necesidades de tecnología.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<script src="botones.js"></script>
