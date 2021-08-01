@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caisa | Sistema Integral Jurídico</title>
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <script type="text/javascript">
+        /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+            if (!pageYOffset) window.scrollTo(0, 1);
+        }, 1000);
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/amazium.css">
+    <link rel="stylesheet" href="CSS/amazium-percent.css">
+    <link rel="stylesheet" href="CSS/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/2a1eb696f2.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="indexi.js"></script>
+    <script src="botones.js"></script>
+
+</head>
+
+<body>
+    <div class="row-max">
+        <div id="">
+            <div class="">
+                <div id="header">
+                    <div class="row-max">
+                        <div class="grid_2 px-5 text-center"><a href="index.html"><img src="img/logo.png" alt="Caisa"
+                                    class="logo"></a></div>
+                        <div class="grid" style="padding-top: 25px;">
+                            <div class="txt-center px-5">
+                                <ul id="menutop">
+                                    <li><a href="index.html" class="lactive">Inicio</a></li>
+                                    <li><a href="quienessomos.html" class="lactive">Quienes Somos</a></li>
+                                    <li><a href="servicios.html" id="serv" class="lactive">Servicios</a></li>
+                                    <li><a href="productos.html" id="prods" class="lactive">Productos</a></li>
+                                    <li><a href="alianzas.html" id="alian" class="lactive">Alianzas</a></li>
+                                    <li><a href="contacto.html" class="lactive">Contacto</a></li>
+                                    <!-- <input type="text" value="Buscar" id="BS" name="qry"
+										class="placeholder rounded-pill">
+									<input type="image" src="img/sh.png" id="s" title="Buscar"> -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultados"></div>
+    <script>
+        $('#BS').click(function () {
+            $('#BS').removeClass('placeholder'),
+                $('#BS').val('')
+        })
+        $('#s').click(function () {
+            var datos = $('#BS').val();
+            if (datos != "Buscar") {
+                $('#resultados').load('/search.php?qry=' + datos, function () {
+                    $('#resultados').slideDown();
+                });
+            }
+        })
+        $('#BS').keypress(function (e) {
+            var datos = $('#BS').val();
+            if (e.which == 13) {
+                if (datos != "") {
+                    $('#resultados').load('/search.php?qry=' + datos, function () {
+                        $('#resultados').slideDown();
+                    });
+                }
+            }
+        });
+    </script>
+
+    <div class="">
+        <div class="col-12">
+            <div class="row-max">
+                <div class="grid_12">
+                    <div class="contqs btsrv">
+
+                        <img src="img/sistema.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gr" style="padding:2em;">
+        <div class="">
+            <div class="row-max">
+                <div class="grid_9">
+                    <div class="servs mt-3">
+                        <p class="servs">Una soluci&oacute;n dise&ntilde;ada para las &aacute;reas jur&iacute;dicas
+                            corporativas, con
+                            un esquema de seguridad robusto que permite restringir o permitir el acceso a
+                            caracter&iacute;sticas o informaci&oacute;n espec&iacute;fica a usuarios o grupos de
+                            usuarios y que permite llevar el control de:</p>
+
+                        <ul>
+                            <li>Asuntos litigiosos</li>
+                            <li>Concesiones y permisos</li>
+                            <li>Propiedad intelectual</li>
+                            <li>Inmuebles</li>
+                            <li>Contratos</li>
+                            <li>Escrituras y otros documentos</li>
+                        </ul>
+                        <div class="float-clear"></div>
+                    </div>
+                </div>
+                <div class="grid_3 mt-4">
+                    <div class="menuside">
+                        <img src="img/tproductos.png" alt="Productos" class="tim" id="btProds">
+                        <ul id="mProds" style="display:block;">
+                            <li><span class="tside">Nuestros productos</span></li>
+                            <li><a href="expediente.html" style="color:#006699;" class=" lsubs">Expediente
+                                    Clí­nico Electrónico</a></li>
+                            <li><a href="control.html" style="color:#006699;" class=" lsubs">Control de
+                                    Precios Unitarios</a></li>
+                            <li><a href="sistemaint.html" style="color:#006699;" class="infsel lsubs">Sistema
+                                    Integral Jurídico</a></li>
+                            <li><a href="sap.html" style="color:#006699;" class="">SAP</a></li>
+                            <li><a href="microsoft.html" style="color:#006699;" class="">Microsoft</a></li>
+                            <li><a href="fortinet.html" style="color:#006699;" class="">Fortinet</a></li>
+                            <li><a href="cisco.html" style="color:#006699;" class="">CISCO</a></li>
+                            <li><a href="huawei.html" style="color:#006699;" class="">Huawei</a></li>
+                            <li><a href="ibm.html" style="color:#006699;" class="">IBM</a></li>
+                            <li style="border:none;"><a href="citrix.html" style="color:#006699;" class="">CITRIX</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menuside">
+                        <img src="img/tservicios.png" alt="Servicios" class="tim" id="btServs">
+                        <ul id="mServs">
+                            <li style="border-bottom: solid 1px #009999;"><a href="ciberseguridad.html"
+                                    style="color:#009999;">Ciberseguridad</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="Bianalitics.html"
+                                    style="color:#009999;">BI y Analytics</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="virtualizacion.html"
+                                    style="color:#009999;">Virtualización</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="SAM.html"
+                                    style="color:#009999;">SAM</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="redes.html"
+                                    style="color:#009999;">Redes</a></li>
+                            <li style="border-bottom: solid 1px #009999;"><a href="serviciosadministrados.html"
+                                    style="color:#009999;">Servicios Administrados</a></li>
+                            <li style="border:none;"><a href="basesdedatos.html" style="color:#009999;">Bases de
+                                    Datos</a></li>
+                        </ul>
+                    </div>
+                    <div class="menuside">
+                        <a href="alianzas.html"><img src="img/talianzas.png" alt="Alianzas" class="tim"></a>
+                    </div>
+                    <script>
+                        $('#btProds').click(function () {
+                            $('#mProds').slideDown("fast"),
+                                $('#mServs').slideUp("fast");
+                        });
+                        $('#btServs').click(function () {
+                            $('#mServs').slideDown("fast"),
+                                $('#mProds').slideUp("fast");
+                        })
+                    </script>
+                </div>
+                <div class="float-clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row-max">
+            <div class="btsrv">
+                <div class="grid_4"><a href="servicios.html"><img src="img/servicios.png" alt="Servicios"></a></div>
+                <div class="grid_4"><a href="productos.html"><img src="img/productos.png" alt="Productos"></a></div>
+                <div class="grid_4"><a href="alianzas.html"><img src="img/alianzas.png" alt="Anlianzas"></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- empieza el footer -->
+    <div class="bg_foot">
+        <div class="">
+            <div id="foot1">
+                <div class="row-max">
+
+                    <div class="grid_12 justify-content-center">
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos"><a href="quienessomos.html">Quienes somos</a></span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="quienessomos.html">Historia</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="quienessomos.html">Misión</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="quienessomos.html">Visión</a></li>
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Servicios</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="Bianalitics.html">BI y Analytics</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="virtualizacion.html">Virtualización</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="SAM.html">SAM</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="redes.html">Redes</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="serviciosadministrados.html">Servicios Administrados</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="basesdedatos.html">Bases de Datos</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Productos</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="expediente.html">Expediente Clí­nico Electrónico</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="control.html">Control de Precios Unitarios</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="sistemaint.html">Sistema Integral Jurídico</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="sap.html">SAP</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="microsoft.html">Microsoft</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="fortinet.html">Fortinet</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="cisco.html">CISCO</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="huawei.html">Huawei</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="ibm.html">IBM</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li><a href="citrix.html">CITRIX</a></li>
+                                <li class="lhcs">&nbsp;</li>
+
+                            </ul>
+                        </div>
+                        <div class="px-5 grid_3">
+                            <ul>
+                                <li><span class="titulos">Alianzas</span></li>
+                                <li>&nbsp;</li>
+                                <li><a href="//www.microsoft.com/es-mx/" target="_blank">Microsoft</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//www.fortinet.com/" target="_blank">Fortinet</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="https://www.oracle.com/index.html" target="_blank">Oracle</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//consumer.huawei.com/mx/" target="_blank">Huawei</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li><a href="//lac.citrix.com/" target="_blank">Citrix</a></li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+                                <li class="lhcs">&nbsp;</li>
+
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                <li><a href="avisodeprivacidad.html"><b>AVISO DE PRIVACIDAD</b></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- empieza el segundo footer -->
+    <div id="bg_foot1">
+        <div class="">
+            <div class="row-max">
+                <div class="grid_8">
+                    <ul id="footmenu">
+                        <li><a href="/">Inicio</a></li>
+                        <li>|</li>
+                        <li><a href="quienessomos.html">Quienes Somos</a></li>
+                        <li>|</li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li>|</li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li>|</li>
+                        <li><a href="alianzas.html">Alianzas</a></li>
+                        <li>|</li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li>|</li>
+                    </ul>
+                </div>
+                <div class="grid_4 text-center" style="color: #005468;">
+                    <div class="slog"><b>CAISA</b> La
+                        solución integral a sus necesidades de tecnología.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<script src="botones.js"></script>
